@@ -2,8 +2,44 @@
 aside: false
 ---
 
+<style>
+  .use-now-pre {
+    text-align: left;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 3em 0 0.5em;
+  }
+
+  .use-now {
+    font-size: 16px;
+    float: left;
+    width: 47%;
+    line-height: 46px;
+  }
+
+  .use-now + * {
+    float: right;
+    width: 47%;
+  }
+
+  .use-now + * + * {
+    float: left;
+    width: 47%;
+  }
+
+  .part2 {
+    float: left;
+    width: 47%;
+  }
+
+  .part2 + * {
+    float: right;
+    width: 47%;
+  }
+</style>
+
 <div style='font-size:18px;position:relative;top:-20px;text-align:right'>
-  This guide & polyfill was created by
+  This guide & polyfill were created by
   <a href='https://fullcalendar.io/' target='_blank'>FullCalendar</a>
 </div>
 
@@ -89,46 +125,25 @@ yarn i temporal-polyfill
 
 <div style='clear:both'></div>
 
-<div style='font-size:28px;font-weight:500;margin:3em 0 0.5em'>
-  For Library Authors
+<div class='part2'>
+  <div style='font-size:28px;font-weight:500;margin:3em 0 0.5em'>
+    For Package Authors
+  </div>
+  <div style='line-height: 28px; margin-top: 20px;'>
+    Want to use Temporal in your JavaScript package but don't want to be dependent on a polyfill?
+    Take a look at the <a href='tree-shakeable' style='white-space: nowrap'>tree-shakeable API &raquo;</a>
+  </div>
 </div>
-<div style='line-height: 34px; margin-top: 20px;'>
-  Want to use Temporal in your JavaScript package but don't want to be dependent on a polyfill?<br />
-  Take a look at the <a href='tree-shakeable'>tree-shakeable API &raquo;</a>
+
+<div>
+  <div style='font-size:28px;font-weight:500;margin:3em 0 0.5em'>
+    About this Guide
+  </div>
+  <div style='line-height: 28px; margin-top: 20px;'>
+    This quick-reference website is no substitute for the detailed
+    <a href='https://tc39.es/proposal-temporal/docs/' target='_blank'>TC39 API docs</a>
+    nor forthcoming MDN docs. It focuses on practical matters such as polyfills and utilities.
+  </div>
 </div>
 
-<style>
-  .use-now-pre {
-    text-align: left;
-    font-size: 28px;
-    font-weight: 500;
-    margin: 3em 0 0.5em;
-  }
-
-  .use-now {
-    font-size: 16px;
-    float: left;
-    width: 47%;
-    line-height: 46px;
-  }
-
-  .use-now + * {
-    float: right;
-    width: 47%;
-  }
-
-  .use-now + * + * {
-    float: left;
-    width: 47%;
-  }
-
-  .part2 {
-    float: left;
-    width: 47%;
-  }
-
-  .part2 + * {
-    float: right;
-    width: 47%;
-  }
-</style>
+<div style='clear:both'></div>
