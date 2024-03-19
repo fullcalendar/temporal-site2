@@ -1,6 +1,5 @@
 
 export const componentOverrides = [
-  'VPNav.vue',
   'VPNavBarTitle.vue',
   'VPNavBarSearchButton.vue',
   'VPNavBarTranslations.vue',
