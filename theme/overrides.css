@@ -1,0 +1,42 @@
+
+/*
+Variables
+https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+*/
+
+:root {
+  /* --vp-c-brand-1: red;
+  --vp-c-brand-2: blue; */
+}
+
+/*
+Markdown
+https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/components/vp-doc.css
+*/
+
+.vp-doc h2,
+.vp-doc h3 {
+  margin: 54px 0 22px;
+  border-top: 1px solid var(--vp-c-divider);
+  padding: 24px 0 0;
+  letter-spacing: -0.02em;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.vp-doc h2 .header-anchor,
+.vp-doc h3 .header-anchor {
+  top: 24px;
+}
+
+.vp-doc h1 + h2 {
+  border-top: 0;
+}
+
+.vp-doc h2 + h3 {
+  margin-top: 0;
+}
+
+.vp-doc h4 {
+  margin: 22px 0 18px;
+}
