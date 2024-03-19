@@ -20,15 +20,15 @@ https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/com
 .vp-doc h3 {
   margin: 54px 0 22px;
   border-top: 1px solid var(--vp-c-divider);
-  padding: 24px 0 0;
+  padding: 22px 0 0;
   letter-spacing: -0.02em;
   line-height: 32px;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .vp-doc h2 .header-anchor,
 .vp-doc h3 .header-anchor {
-  top: 24px;
+  top: 22px;
 }
 
 .vp-doc h1 + h2 {

@@ -20,6 +20,8 @@ outlineTitle: ZonedDateTime
 
 # ZonedDateTime
 
+This is a date with an epochTime and also a TimeZone. All ymd fields can be derived.
+
 ## Create and Parse
 
 ### Constructor
