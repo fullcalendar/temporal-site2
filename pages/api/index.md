@@ -93,7 +93,8 @@ zdt.year   // 12
 zdt.month  // 12
 zdt.day    // 12
 zdt.hour   // 12
-zdt.minute // 12, etc...
+zdt.minute // 12,
+zdt.second // 12, etc...
 ```
 
 <div style='clear:left'></div>
@@ -134,7 +135,8 @@ pdt.year   // 12
 pdt.month  // 12
 pdt.day    // 12
 pdt.hour   // 12
-pdt.minute // 12, etc...
+pdt.minute // 12
+pdt.second // 12, etc...
 ```
 
 <div style='clear:left'></div>
@@ -180,7 +182,7 @@ Primarily used for measuring the amount time between other objects. Despite this
 ```js
 dur = new Temporal.Duration( // CORE DATA:
   2, 2, 2, 2,                // years, months, weeks, days
-  1, 1, 1, 1, 1              // hours, minutes, seconds, etc...
+  1, 1, 1,                   // hours, minutes, seconds, etc...
 )
 ```
 
