@@ -2,48 +2,133 @@
 aside: false
 ---
 
-# Welcome!
+<div style='font-size:18px;position:relative;top:-20px;text-align:right'>
+  This guide & polyfill was created by
+  <a href='https://fullcalendar.io/' target='_blank'>FullCalendar</a>
+</div>
 
-This page demonstrates usage of some of the runtime APIs provided by VitePress.
+<div style='text-align:center'>
+  <h1 style='margin:0;margin-top:2em;font-size:60px'>Temporal</h1>
+  <h2 style='margin:0;font-size:36px;line-height:48px'>
+    The standards-compliant successor<br />
+    to the JavaScript Date object
+  </h2>
+</div>
 
-The main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:
+<div style='margin:2em 0;text-align:center'>
+  <VPButton text='Learn the API' href='api/index' />&nbsp;
+  <VPButton text='Use the polyfill' theme='alt' href='polyfill' />
+</div>
 
-```md
-<script setup>
-import { useData } from 'vitepress'
+<div class='use-now-pre'>
+  Use it now!
+</div>
 
-const { theme, page, frontmatter } = useData()
-</script>
+<div class='use-now'>
+  A polyfill is currently required. <a href='polyfill'>Learn more &raquo;</a>
+</div>
 
-## Results
+```js
+import 'temporal-polyfill/global'
 
-### Theme Data
-<pre>{{ theme }}</pre>
-
-### Page Data
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
+console.log(
+  Temporal.Now.zonedDateTimeISO().toString()
+)
 ```
 
-<script setup>
-import { useData } from 'vitepress'
+::: code-group
 
-const { site, theme, page, frontmatter } = useData()
-</script>
+```sh [NPM]
+npm i temporal-polyfill
+```
 
-## Results
+```sh [PNPM]
+pnpm i -D temporal-polyfill
+```
 
-### Theme Data
-<pre>{{ theme }}</pre>
+```sh [Yarn]
+yarn i temporal-polyfill
+```
 
-### Page Data
-<pre>{{ page }}</pre>
+:::
 
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
+<div style='clear:both'></div>
 
-## More
+<div class='part2'>
+  <div style='font-size:28px;font-weight:500;margin:3em 0 0.5em'>
+    Native Support
+  </div>
+  <div style='line-height: 46px; font-size: 16px; margin-bottom: 16px'>
+    Temporal is not yet natively supported in any major browser.
+  </div>
+  <div style='height:200px;overflow:hidden;margin-right:8px'>
+    <div style='width:800px;margin-top:-80px;margin-left:-4px'>
+      <picture>
+        <source type="image/webp" srcset="https://caniuse.bitsofco.de/image/temporal.webp">
+        <source type="image/png" srcset="https://caniuse.bitsofco.de/image/temporal.png">
+        <img src="https://caniuse.bitsofco.de/image/temporal.jpg" alt="Data on support for the temporal feature across the major browsers from caniuse.com">
+      </picture>
+    </div>
+  </div>
+</div>
 
-Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).
+<div>
+  <div style='font-size:28px;font-weight:500;margin:3em 0 0.5em'>
+    About the Spec
+  </div>
+  <div style='line-height: 28px; margin-top: 22px'>
+    The spec was written by the TC39 committee, started in 2019. It is currently in Stage 3, meaning browser implementors are at work.
+    <a href='https://github.com/tc39/proposal-temporal' target='_blank'>Read more about the spec &raquo;</a><br />
+    <br />
+    The creators of this guide, who are also the creators of
+    <a href='https://github.com/fullcalendar/fullcalendar' target='_blank'>FullCalendar</a> and
+    <a href='https://github.com/fullcalendar/temporal-polyfill' target='_blank'>temporal-polyfill</a>,
+    have made contributions to the spec, though are not affiliated with TC39.
+  </div>
+</div>
+
+<div style='clear:both'></div>
+
+<div style='font-size:28px;font-weight:500;margin:3em 0 0.5em'>
+  For Library Authors
+</div>
+<div style='line-height: 34px; margin-top: 20px;'>
+  Want to use Temporal in your JavaScript package but don't want to be dependent on a polyfill?<br />
+  Take a look at the <a href='tree-shakeable'>tree-shakeable API &raquo;</a>
+</div>
+
+<style>
+  .use-now-pre {
+    text-align: left;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 3em 0 0.5em;
+  }
+
+  .use-now {
+    font-size: 16px;
+    float: left;
+    width: 47%;
+    line-height: 46px;
+  }
+
+  .use-now + * {
+    float: right;
+    width: 47%;
+  }
+
+  .use-now + * + * {
+    float: left;
+    width: 47%;
+  }
+
+  .part2 {
+    float: left;
+    width: 47%;
+  }
+
+  .part2 + * {
+    float: right;
+    width: 47%;
+  }
+</style>

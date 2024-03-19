@@ -38,17 +38,11 @@ export default defineConfig({
       provider: 'local'
     },
 
-    // // https://vitepress.dev/reference/default-theme-config
-    // nav: [
-    //   {
-    //     text: 'Stock',
-    //     items: [
-    //       { text: 'Homepage', link: '/stock/homepage' },
-    //       { text: 'API Examples', link: '/stock/api-examples' },
-    //       { text: 'Markdown Examples', link: '/stock/markdown-examples' }
-    //     ]
-    //   }
-    // ],
+    // // only works one 'home' layout
+    // footer: {
+    //   message: 'Released under the MIT License.',
+    //   copyright: 'Copyright © 2024 Adam Shaw',
+    // },
 
     sidebar: [
       { text: 'Introduction', link: '/' },
