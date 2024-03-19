@@ -16,4 +16,6 @@ watchEffect(() => {
 })
 </script>
 
-<template></template>
+<template>
+  <div class="killed-VPNav"></div>
+</template>
