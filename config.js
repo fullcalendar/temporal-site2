@@ -98,9 +98,6 @@ export default defineConfig({
   },
 
   vite: {
-    build: {
-      minify: false,
-    },
     resolve: {
       alias: componentOverrides.map((componentPath) => ({
         find: new RegExp('^.*\\/' + escapeRegExp(componentPath) + '$'),
