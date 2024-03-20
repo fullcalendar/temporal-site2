@@ -27,7 +27,7 @@ aside: false
   }
 </style>
 
-# Standard API
+# Temporal API
 
 The API consists of a `Temporal` global namespace with 10 different types of objects (like `Temporal.PlainDate`).
 
@@ -103,7 +103,7 @@ zdt.second // 12, etc...
 
 ## `Temporal.Instant`
 
-A simple wrapper around an epoch-nanoseconds **in no particular time zone**.
+A simple wrapper around an epoch-nanoseconds. Represents an exact point-in-time, **but in no particular time zone**.
 
 ```js
 inst = new Temporal.Instant( // CORE DATA:

@@ -141,7 +141,7 @@ yarn i temporal-polyfill
   </div>
   <div style='line-height: 28px; margin-top: 20px;'>
     This quick-reference website is no substitute for the detailed
-    <a href='https://tc39.es/proposal-temporal/docs/' target='_blank'>TC39 API docs</a>
+    <a href='https://tc39.es/proposal-temporal/docs/' target='_blank'>TC39 docs</a>
     nor forthcoming MDN docs. It focuses on practical matters such as polyfills and utilities.
   </div>
 </div>
