@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vitepress'
 import slugify from '@sindresorhus/slugify'
 import { componentOverrides } from './theme/overrides'
+import svgLoader from 'vite-svg-loader'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -92,6 +93,7 @@ export default defineConfig({
   },
 
   vite: {
+    plugins: [svgLoader()],
     resolve: {
       alias: componentOverrides.map((componentPath) => ({
         find: new RegExp('^.*\\/' + escapeRegExp(componentPath) + '$'),

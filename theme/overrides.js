@@ -5,6 +5,7 @@ export const componentOverrides = [
   'VPNavBarTranslations.vue',
   'VPFlyout.vue',
   'VPSidebar.vue',
+  'VPSidebarItem.vue',
   'VPDoc.vue',
   'VPDocAsideOutline.vue',
 ]
