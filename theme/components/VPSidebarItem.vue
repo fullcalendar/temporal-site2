@@ -157,7 +157,7 @@ function onCaretClick() {
 
 <style scoped>
 .VPSidebarItem.level-0 {
-  padding-bottom: 24px;
+  padding-bottom: 18px;
 }
 
 .VPSidebarItem.collapsed.level-0 {
@@ -206,8 +206,8 @@ function onCaretClick() {
 }
 
 svg + .text {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .VPSidebarItem.level-0 .text {
