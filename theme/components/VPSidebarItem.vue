@@ -191,6 +191,10 @@ function onCaretClick() {
   background-color: var(--vp-c-brand-1);
 }
 
+.item + .items {
+  margin-top: 4px;
+}
+
 .link {
   display: flex;
   align-items: center;
@@ -226,7 +230,7 @@ svg + .text {
 }
 
 .VPSidebarItem svg {
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .VPSidebarItem.is-link > .item > .link:hover svg,
