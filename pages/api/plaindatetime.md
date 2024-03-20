@@ -173,7 +173,7 @@ pdt = Temporal.Now.plainDateTime({
 pdt.monthsInYear // 12
 ```
 
-### Day-of-Month {#day}
+### Day of Month
 
 Is 1-based!
 
@@ -296,7 +296,7 @@ import { withWeekOfYear } from 'temporal-utils'
 pdt1 = withWeekOfYear(pdt, 8)
 ```
 
-### Day-of-Week
+### Day of Week
 
 Explain 1 means Monday...
 This is REGARDLESS of locale. Always ISO
@@ -317,7 +317,7 @@ import { withDayOfWeek } from 'temporal-utils'
 pdt2 = withDayOfWeek(pdt, 6)
 ```
 
-### Day-of-Year
+### Day of Year
 
 Is 1-based!!!
 
@@ -337,7 +337,7 @@ import { withDayOfYear } from 'temporal-utils'
 pdt2 = withDayOfYear(pdt, 48)
 ```
 
-### Days-in-Unit
+### Days in Unit
 
 Simple
 
@@ -386,7 +386,7 @@ pdt2 = new Temporal.PlainDateTime(
 
 ## Math
 
-### Add or Subtract
+### Add and Subtract
 
 Give a Duration or Duration-like fields:
 
@@ -485,7 +485,7 @@ pdt2 = roundToWeek(pdt, {
 })
 ```
 
-### Start-of-Unit
+### Start of Unit
 
 Start of year (might not be midnight):
 
@@ -514,6 +514,18 @@ pdt2 = startOfMonth(pdt)
 ```
 
 Also PLEASE look at PlainDateTime::toPlainYearMonth
+
+Start of week:
+
+```js
+pdt2 = pdt.add({ days: 1 - pdt.dayOfWeek })
+```
+
+```js
+import { startOfWeek } from 'temporal-utils'
+
+pdt2 = startOfWeek(pdt)
+```
 
 Start of day (might not be midnight):
 
@@ -598,7 +610,7 @@ import { startOfMicrosecond } from 'temporal-utils'
 pdt2 = startOfMicrosecond(pdt)
 ```
 
-### End-of-Unit
+### End of Unit
 
 Explain inclusive vs exclusive.
 
@@ -982,7 +994,7 @@ nsRounded = diffNanoseconds(pdt1, pdt2, 'halfExpand')
 nsUnrounded = diffNanoseconds(pdt1, pdt2)
 ```
 
-### Compare or Sort
+### Compare and Sort
 
 Compare:
 

@@ -69,6 +69,13 @@ zdt = NowFns.zonedDateTime({
 })
 ```
 
+### Is Instance
+
+```js
+ZonedDateTimeFns.isInstance(123) // false
+ZonedDateTimeFns.isInstance(zdt) // true
+```
+
 ## Get and Set
 
 Mention that `getFields` is fast.
@@ -162,7 +169,7 @@ zdt = ZonedDateTimeFns.fromFields({
 monthsInYear = ZonedDateTimeFns.monthsInYear(zdt) // 12
 ```
 
-### Day-of-Month {#day}
+### Day of Month
 
 Is 1-based!
 
@@ -256,7 +263,7 @@ nanosecond = ZonedDateTimeFns.getFields(zdt).nanosecond // 9
 zdt2 = ZonedDateTimeFns.withFields(zdt, { nanosecond: 9 })
 ```
 
-### Epoch-Time
+### Epoch Time
 
 Time since epoch in various units
 
@@ -399,7 +406,7 @@ ZonedDateTimeFns.yearOfWeek(zdt) // 2024
 zdt1 = ZonedDateTimeFns.withWeekOfYear(zdt, 8)
 ```
 
-### Day-of-Week
+### Day of Week
 
 Explain 1 means Monday...
 This is REGARDLESS of locale. Always ISO
@@ -416,7 +423,7 @@ ZonedDateTimeFns.dayOfWeek(zdt) // 4 (Thursday)
 zdt2 = ZonedDateTimeFns.withDayOfWeek(zdt, 6)
 ```
 
-### Day-of-Year
+### Day of Year
 
 Is 1-based!!!
 
@@ -432,7 +439,7 @@ ZonedDateTimeFns.dayOfYear(zdt) // 89
 zdt2 = ZonedDateTimeFns.withDayOfYear(zdt, 48)
 ```
 
-### Days-in-Unit
+### Days in Unit
 
 Simple
 
@@ -448,7 +455,7 @@ ZonedDateTimeFns.daysInMonth(zdt) // 23
 ZonedDateTimeFns.daysInWeek(zdt) // 7
 ```
 
-### Hours-in-Day {#hoursInDay}
+### Hours in Day
 
 Might be 23 or 25 if DST
 
@@ -500,7 +507,7 @@ zdt2 = PlainDateTimeFns.toZonedDateTime(
 
 ## Math
 
-### Add or Subtract
+### Add and Subtract
 
 Give a Duration or Duration-like fields:
 
@@ -617,7 +624,7 @@ zdt2 = ZonedDateTimeFns.roundToWeek(zdt, {
 })
 ```
 
-### Start-of-Unit
+### Start of Unit
 
 Start of year (might not be midnight):
 
@@ -633,6 +640,14 @@ Start of month (might not be midnight):
 import * as ZonedDateTimeFns from 'temporal-polyfill/fns/zoneddatetime'
 
 zdt2 = ZonedDateTimeFns.startOfMonth(zdt)
+```
+
+Start of week:
+
+```js
+import * as ZonedDateTimeFns from 'temporal-polyfill/fns/zoneddatetime'
+
+zdt2 = ZonedDateTimeFns.startOfWeek(zdt)
 ```
 
 Start of day (might not be midnight):
@@ -683,7 +698,7 @@ import * as ZonedDateTimeFns from 'temporal-polyfill/fns/zoneddatetime'
 zdt2 = ZonedDateTimeFns.startOfMicrosecond(zdt)
 ```
 
-### End-of-Unit
+### End of Unit
 
 Explain inclusive vs exclusive.
 

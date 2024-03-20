@@ -217,7 +217,7 @@ durAbs = durNeg.abs()
 // { year: 1, days: 1, ...etc... }
 ```
 
-### Add or Subtract
+### Add and Subtract
 
 Things:
 

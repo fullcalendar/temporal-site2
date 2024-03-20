@@ -167,7 +167,7 @@ zdt = Temporal.Now.zonedDateTime({
 zdt.monthsInYear // 12
 ```
 
-### Day-of-Month
+### Day of Month
 
 Is 1-based!
 
@@ -247,7 +247,7 @@ zdt.nanosecond // 9
 zdt2 = zdt.with({ nanosecond: 9 })
 ```
 
-### Epoch-Time
+### Epoch Time
 
 Time since epoch in various units
 
@@ -375,7 +375,7 @@ import { withWeekOfYear } from 'temporal-utils'
 zdt1 = withWeekOfYear(zdt, 8)
 ```
 
-### Day-of-Week
+### Day of Week
 
 Explain 1 means Monday...
 This is REGARDLESS of locale. Always ISO
@@ -396,7 +396,7 @@ import { withDayOfWeek } from 'temporal-utils'
 zdt2 = withDayOfWeek(zdt, 6)
 ```
 
-### Day-of-Year
+### Day of Year
 
 Is 1-based!!!
 
@@ -416,7 +416,7 @@ import { withDayOfYear } from 'temporal-utils'
 zdt2 = withDayOfYear(zdt, 48)
 ```
 
-### Days-in-Unit
+### Days in Unit
 
 Simple
 
@@ -430,7 +430,7 @@ zdt.daysInMonth // 23
 zdt.daysInWeek // 7
 ```
 
-### Hours-in-Day
+### Hours in Day
 
 Might be 23 or 25 if DST
 
@@ -474,7 +474,7 @@ zdt2 = new Temporal.PlainDateTime(
 
 ## Math
 
-### Add or Subtract
+### Add and Subtract
 
 Give a Duration or Duration-like fields:
 
@@ -580,7 +580,7 @@ zdt2 = roundToWeek(zdt, {
 })
 ```
 
-### Start-of-Unit
+### Start of Unit
 
 Start of year (might not be midnight):
 
@@ -606,6 +606,19 @@ zdt2 = zdt.with({ day: 1 })
 import { startOfMonth } from 'temporal-utils'
 
 zdt2 = startOfMonth(zdt)
+```
+
+Start of week:
+
+```js
+zdt2 = zdt.add({ days: 1 - zdt.dayOfWeek })
+  .startOfDay()
+```
+
+```js
+import { startOfWeek } from 'temporal-utils'
+
+zdt2 = startOfWeek(zdt)
 ```
 
 Start of day (might not be midnight):
@@ -689,7 +702,7 @@ import { startOfMicrosecond } from 'temporal-utils'
 zdt2 = startOfMicrosecond(zdt)
 ```
 
-### End-of-Unit
+### End of Unit
 
 Explain inclusive vs exclusive.
 
@@ -1073,7 +1086,7 @@ nsRounded = diffNanoseconds(zdt1, zdt2, 'halfExpand')
 nsUnrounded = diffNanoseconds(zdt1, zdt2)
 ```
 
-### Compare or Sort
+### Compare and Sort
 
 ```js
 zdt1 = Temporal.ZonedDateTime.from('2024-03-06T12:30[America/New_York]')

@@ -4,46 +4,51 @@ outline: deep
 
 # temporal-utils
 
-This page demonstrates usage of some of the runtime APIs provided by VitePress.
+## Set
 
-The main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:
+- withWeekOfYear
+- withDayOfWeek
+- withDayOfYear
 
-```md
-<script setup>
-import { useData } from 'vitepress'
+## Round
 
-const { theme, page, frontmatter } = useData()
-</script>
+- roundToYear
+- roundToMonth
+- roundToWeek
 
-## Results
+## Start of Unit
 
-### Theme Data
-<pre>{{ theme }}</pre>
+- startOfYear
+- startOfMonth
+- (startOfWeek --- document this!)
+- startOfDay -- for all except ZonedDateTime
+- startOfHour
+- startOfMinute
+- startOfSecond
+- startOfMillisecond
+- startOfMicrosecond
 
-### Page Data
-<pre>{{ page }}</pre>
+## End of Unit
 
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
-```
+- endOfYearExcl, endOfYearIncl
+- endOfMonthExcl, endOfMonthIncl
+- (endOfWeekExcl, endOfWeekIncl --- document this!)
+- endOfDayExcl, endOfDayIncl
+- endOfHourExcl, endOfHourIncl
+- endOfMinuteExcl, endOfMinuteIncl
+- endOfSecondExcl, endOfSecondIncl
+- endOfMillisecondExcl, endOfMillisecondIncl
+- endOfMicrosecondExcl, endOfMicrosecondIncl
 
-<script setup>
-import { useData } from 'vitepress'
+## Diff Unit
 
-const { site, theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-### Theme Data
-<pre>{{ theme }}</pre>
-
-### Page Data
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
-
-## More
-
-Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).
+- diffYears
+- diffMonths
+- diffWeeks
+- diffDays
+- diffHours
+- diffMinutes
+- diffSeconds
+- diffMilliseconds
+- diffMicroseconds
+- diffNanoseconds

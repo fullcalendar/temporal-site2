@@ -11,9 +11,9 @@ You normally just want to get these as props on PlainDate/etc.
 
 Subclassing is out of scope.
 
-## Create {.small}
+## Create
 
-### Constructor {.big}
+### Constructor
 
 ```js
 cal = new Temporal.Calendar('gregory')
@@ -21,7 +21,7 @@ cal = new Temporal.Calendar('gregory')
 
 Must be a native calendar
 
-### From Other {.big}
+### From Other
 
 ```js
 cal = Temporal.Calendar.from(
@@ -47,11 +47,11 @@ cal.id // 'gregory'
 
 Same thing as `.toString()` and `.toJSON()`.
 
-## Field Compute {.small}
+## Field Compute
 
 These methods are used internally by PlainDate, PlainDateTime, and ZonedDateTime.
 
-### Year {.big}
+### Year
 
 #### `.year()`
 
@@ -80,7 +80,7 @@ pd.era // 'asdf'
 pd.eraYear // 2323
 ```
 
-### Month {.big}
+### Month
 
 #### `.month()`
 #### `.monthCode()`
@@ -100,7 +100,7 @@ pd.monthCode // 'M07'
 pd.monthsInYear // 13
 ```
 
-### Day-of-Month {.big}
+### Day of Month
 
 #### `.day()`
 
@@ -114,7 +114,7 @@ pd = Temporal.PlainDate.from('2004-02-02[u-ca=hebrew]')
 pd.day 7
 ```
 
-### Week {.big}
+### Week
 
 #### `.weekOfYear()`
 #### `.yearOfWeek()`
@@ -131,7 +131,7 @@ pd.weekOfYear // 7
 pd.yearOfWeek // 1212
 ```
 
-### Day-of-Week {.big}
+### Day of Week
 
 #### `.dayOfWeek()`
 
@@ -145,7 +145,7 @@ pd = Temporal.PlainDate.from('2004-02-02[u-ca=hebrew]')
 pd.dayOfWeek // 2
 ```
 
-### Day-of-Year {.big}
+### Day of Year
 
 #### `.dayOfYear()`
 
@@ -159,7 +159,7 @@ pd = Temporal.PlainDate.from('2004-02-02[u-ca=hebrew]')
 pd.dayOfYear // 87
 ```
 
-### Days-in-Unit {.big}
+### Days in Unit
 
 #### `.daysInYear()`
 #### `.daysInMonth()`
@@ -239,9 +239,9 @@ pmd = Temporal.PlainMonthDay.from({
 
 User internally by the `.from` methods. Only relevant if creating custom calendar.
 
-## Math {.small}
+## Math
 
-### Add {.big}
+### Add
 
 #### `.dateAdd()`
 
@@ -255,7 +255,7 @@ pd1 = Temporal.PlainDate.from('2023-02-12[u-ca=hebrew]')
 pd2 = pd1.add({ year: 1 })
 ```
 
-### Difference {.big}
+### Difference
 
 #### `.dateUntil()`
 

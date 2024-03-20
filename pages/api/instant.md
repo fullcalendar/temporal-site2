@@ -15,7 +15,7 @@ inst = new Temporal.Instant(1553906700000000000n)
 
 But use `.fromEpochNanoseconds()` instead.
 
-### From Epoch-Time
+### From Epoch Time
 
 Depends on the unit
 
@@ -66,7 +66,7 @@ inst = Temporal.Instant.from(zdt)
 inst = Temporal.Now.instant()
 ```
 
-## Get Epoch-Time
+## Get Epoch Time
 
 #### `.epochNanoseconds`
 
@@ -94,7 +94,7 @@ inst.epochSeconds // 1553906700
 
 ## Math
 
-### Add or Subtract
+### Add and Subtract
 
 You can only add or subtract time units. Years/months/weeks/days are not supported.
 
@@ -126,7 +126,7 @@ inst.round({
 
 Learn about all the settings.
 
-### Start-of-Unit
+### Start of Unit
 
 Start of hour:
 
@@ -203,7 +203,7 @@ import { startOfMicrosecond } from 'temporal-utils'
 inst2 = startOfMicrosecond(inst)
 ```
 
-### End-of-Unit
+### End of Unit
 
 Explain inclusive vs exclusive.
 
@@ -434,7 +434,7 @@ nsRounded = diffNanoseconds(inst1, inst2, 'halfExpand')
 nsUnrounded = diffNanoseconds(inst1, inst2)
 ```
 
-### Compare or Sort
+### Compare and Sort
 
 ```js
 inst1 = Temporal.Instant.from('2024-03-06T12:30Z')
